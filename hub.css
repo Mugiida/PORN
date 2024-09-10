@@ -1,0 +1,191 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+	box-sizing: border-box;
+}
+.header {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	position: fixed;
+	background-color: rgb(44, 34, 34);
+	padding: 16px 14px 16px 14px;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	top: 0;
+	z-index: 1000000000;
+}
+
+.logo {
+	color: white;
+	cursor: default;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+.hub {
+	background-color: orange;
+	border-radius: 4px;
+	color: black;
+
+	padding: 5px;
+}
+.right_sec {
+	margin-right: 30px;
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	min-width: 336px;
+}
+.choice {
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	font-size: 18px;
+	text-transform: capitalize;
+	margin-right: 20px;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	padding: 7px;
+}
+.choice:hover {
+	transition: all 0.3s;
+	transition: ease-out 0.3s;
+	color: black;
+	transform: scale(1.05);
+	background-color: orange;
+}
+@media only screen and (max-width: 467px) {
+	.header {
+		flex-direction: column; /* Stack logo and right_sec vertically */
+		justify-content: center; /* Center elements vertically */
+		align-items: center; /* Center elements horizontally */
+	}
+
+	.logo {
+		text-align: center;
+		margin-bottom: 10px; /* Add some space between logo and right_sec */
+	}
+
+	.right_sec {
+		width: 100%; /* Make it take full width */
+		justify-content: center; /* Center the content */
+		margin-top: 10px; /* Add spacing */
+		margin-right: 0; /* Remove right margin */
+	}
+}
+.logo1 {
+	color: white;
+	cursor: default;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.hub1 {
+	background-color: orange;
+	border-radius: 4px;
+	padding: 5px;
+	color: black;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 10px; /* Space between video containers */
+	padding: 10px;
+	padding: 10px;
+}
+
+.vd {
+	width: 100%;
+	height: 100%;
+	min-height: 100px; /* Minimum height for smaller screens */
+	max-height: 400px; /* Maximum height for larger screens */
+}
+.vd_container {
+	background-color: rgba(0, 0, 0, 0.8);
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 300px; /* Make each container flexible */
+	max-width: 48%; /* Control the maximum width */
+	margin: 10px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.desc {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+}
+.off {
+	color: white;
+	font-weight: bold;
+	margin-left: 5px;
+	cursor: default;
+}
+@media (max-width: 600px) {
+	.vd_container {
+		flex: 1 1 45%; /* Allow two videos per row by setting a smaller minimum width */
+	}
+}
+
+/* For very small phones (optional) */
+@media (max-width: 400px) {
+	.vd_container {
+		flex: 1 1 100%; /* Fall back to one video per row */
+	}
+}
+body {
+	background-color: rgb(77, 77, 77);
+}
+.pub {
+	width: 100%;
+	overflow: hidden;
+	margin-top: 100px;
+	position: relative;
+}
+
+.pv {
+	width: 100%; /* Adjusted to 100% for proper scaling */
+	height: 100vh; /* Ensure it covers the full height */
+	object-fit: cover; /* Ensures the video fills the container while maintaining aspect ratio */
+	object-position: center; /* Centers the video content */
+}
+
+.wlcm {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bolder;
+	padding: 10px;
+	cursor: default;
+}
+.sonn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	font-weight: bold;
+	color: white;
+	font-family: "Courier New", Courier, monospace;
+	padding: 20px 10px 10px 10px;
+}
+.line {
+	background-color: orange;
+	height: 1px;
+	width: 95%;
+	margin: 10px;
+}
